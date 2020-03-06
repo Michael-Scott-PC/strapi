@@ -976,7 +976,7 @@ module.exports = {
   /**
    * Triggered before user creation.
    */
-  beforeCreate: async model => {
+  beforeCreate: async (model) => {
     // Hash password.
     const passwordHashed = await strapi.api.user.services.user.hashPassword(model.password);
 
